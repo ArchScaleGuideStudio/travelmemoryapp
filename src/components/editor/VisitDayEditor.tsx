@@ -190,7 +190,7 @@ export function VisitDayEditor({ day, onChange, defaultExpanded = false }: Props
           >
             <ItemList
               items={day.keyMemories}
-              placeholder='e.g. "Mom''s first time seeing snow"'
+              placeholder={`e.g. "Mom's first time seeing snow"`}
               onAdd={async (text) => {
                 const item = await VisitDaysService.addItem(day.id, 'keyMemories', text)
                 onChange({ ...day, keyMemories: [...day.keyMemories, item] })
@@ -218,7 +218,7 @@ export function VisitDayEditor({ day, onChange, defaultExpanded = false }: Props
           >
             <ItemList
               items={day.keyPoints}
-              placeholder='e.g. "Café Liberty, Nawa Bazaar — ₹40 cardamom chai"'
+              placeholder={`e.g. "Café Liberty, Nawa Bazaar — ₹40 cardamom chai"`}
               onAdd={async (text) => {
                 const item = await VisitDaysService.addItem(day.id, 'keyPoints', text)
                 onChange({ ...day, keyPoints: [...day.keyPoints, item] })
